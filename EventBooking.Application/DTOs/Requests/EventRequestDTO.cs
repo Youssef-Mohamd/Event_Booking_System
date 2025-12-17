@@ -2,23 +2,20 @@
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
-using System.Net.Sockets;
 using System.Text;
 using System.Threading.Tasks;
 using EventBooking.Domain.Enums;
 
-namespace EventBooking.Domain.Entities
+namespace EventBooking.Application.DTOs.Requests
 {
-    public class Event
+    public class EventRequestDTO
     {
-        [Key]
-        public int EventId { get; set; }
 
         [Required, MaxLength(150)]
         public string Title { get; set; }
 
         [MaxLength(1000)]
-        public string Description { get; set; }
+        public string? Description { get; set; }
 
         [Required]
         public DateTime StartDate { get; set; }
@@ -34,18 +31,12 @@ namespace EventBooking.Domain.Entities
         public string Location { get; set; }
 
         [Required]
-        public EventStatus Status { get; set; } = EventStatus.Upcoming;
+        public EventStatus Status { get; set; }
 
         [Required]
         public EventCategory Category { get; set; }
 
         public string? ImageUrl { get; set; }
-
-        // Navigation Properties
-        public ICollection<Booking> Bookings { get; set; } = new List<Booking>();
-        public ICollection<Review> Reviews { get; set; } = new List<Review>();
-        public ICollection<TicketType> TicketTypes { get; set; } = new List<TicketType>();
-        public ICollection<Wishlist> Wishlists { get; set; } = new List<Wishlist>();
 
     }
 }

@@ -22,7 +22,9 @@ namespace EventBookingSystem
 
             // ----------------- 2. Services -----------------
             builder.Services.AddScoped<IAuthService, AuthService>();
-
+            builder.Services.AddScoped<IUserService, UserService>();
+            builder.Services.AddScoped<IEventService, EventService>();
+            builder.Services.AddScoped<IBookingService, BookingService>();
             // ----------------- 3. Controllers -----------------
             builder.Services.AddControllers();
 

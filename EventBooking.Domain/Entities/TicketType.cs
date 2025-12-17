@@ -16,7 +16,7 @@ namespace EventBooking.Domain.Entities
         public int EventId { get; set; }
 
         [Required, MaxLength(50)]
-        public string Name { get; set; } // VIP, Regular, EarlyBird
+        public string Name { get; set; } // VIP, Regular
 
         [Required, Range(0, double.MaxValue)]
         public decimal Price { get; set; }
