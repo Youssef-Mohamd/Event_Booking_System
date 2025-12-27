@@ -250,10 +250,44 @@ EventBookingSystem/
 <img width="1867" height="867" alt="image" src="https://github.com/user-attachments/assets/4cddb474-8a36-47a2-95b1-85a75457eafa" />
 <img width="1830" height="872" alt="image" src="https://github.com/user-attachments/assets/0ff6ad50-9d27-468c-8bc2-78b3454b4294" />
 
+---
+📊 Diagrams
+
+## Class Diagram
 
 <img width="1492" height="792" alt="image" src="https://github.com/user-attachments/assets/3fe1beab-2912-49b9-bcbe-8d350727ed54" />
 
+```mermaid
+sequenceDiagram
+    actor U as User
+    participant A as API
+    participant D as Database
 
+    U->>A: Register/Login
+    A->>D: Save/Check user
+    D-->>A: User data
+    A-->>U: Token
+    
+    U->>A: View events
+    A->>D: Get events
+    D-->>A: Events
+    A-->>U: Show events
+    
+    U->>A: Book event
+    A->>D: Check & save booking
+    D-->>A: Booking saved
+    A-->>U: Booking confirmed
+    
+    U->>A: Add review
+    A->>D: Save review
+    D-->>A: Review saved
+    A-->>U: Review added
+    
+    actor Admin
+    Admin->>A: Manage events
+    A->>D: Update events
+    D-->>A: Updated
+    A-->>Admin: Done
 
 
 
