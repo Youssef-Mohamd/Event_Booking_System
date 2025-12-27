@@ -248,7 +248,12 @@ EventBookingSystem/
 <img width="1900" height="862" alt="image" src="https://github.com/user-attachments/assets/23484bca-3c8b-45f9-bd28-05e05ea5acba" />
 <img width="1887" height="866" alt="image" src="https://github.com/user-attachments/assets/3bd3343b-24d1-47d4-9436-79c938300e48" />
 <img width="1867" height="867" alt="image" src="https://github.com/user-attachments/assets/4cddb474-8a36-47a2-95b1-85a75457eafa" />
-<img width="1830" height="872" alt="image" src="https://github.com/user-attachments/assets/828cd04e-359f-4651-9483-5129f802d69c" />
+<img width="1830" height="872" alt="image" src="https://github.com/user-attachments/assets/0ff6ad50-9d27-468c-8bc2-78b3454b4294" />
+
+
+<img width="1492" height="792" alt="image" src="https://github.com/user-attachments/assets/3fe1beab-2912-49b9-bcbe-8d350727ed54" />
+
+
 
 
 
