@@ -257,6 +257,7 @@ EventBookingSystem/
 
 <img width="1492" height="792" alt="image" src="https://github.com/user-attachments/assets/3fe1beab-2912-49b9-bcbe-8d350727ed54" />
 
+## sequenceDiagram
 ```mermaid
 sequenceDiagram
     actor U as User
