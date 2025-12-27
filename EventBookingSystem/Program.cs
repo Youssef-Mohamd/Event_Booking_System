@@ -28,6 +28,20 @@ namespace EventBookingSystem
             builder.Services.AddScoped<IReviewService, ReviewService>();
             builder.Services.AddScoped<IAdminService, AdminService>();
 
+            //_____________________ Cors___________________
+            builder.Services.AddCors(Options =>
+            {
+
+                Options.AddPolicy("AllowAll", policy=>
+                {
+
+                    policy.AllowAnyOrigin()
+                           .AllowAnyMethod()
+                           .AllowAnyHeader();
+
+                });
+        });
+
 
             // ----------------- 3. Controllers -----------------
             builder.Services.AddControllers();
@@ -39,7 +53,7 @@ namespace EventBookingSystem
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "EventBooking API", Version = "v1" });
 
-                // إضافة تعريف Security Scheme
+                //  Security Scheme
                 c.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
                 {
                     Name = "Authorization",
@@ -50,7 +64,7 @@ namespace EventBookingSystem
                     Description = "Enter 'Bearer' followed by space and your JWT token"
                 });
 
-                // إضافة Requirement علشان كل الـ endpoints يعرفوا يستخدموا الـ token
+                
                 c.AddSecurityRequirement(new OpenApiSecurityRequirement
     {
         {
@@ -110,7 +124,7 @@ namespace EventBookingSystem
             }
 
             app.UseHttpsRedirection();
-
+            app.UseCors("AllowAll");
             app.UseAuthentication(); 
             app.UseAuthorization();
 

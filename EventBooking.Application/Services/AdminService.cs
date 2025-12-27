@@ -44,7 +44,8 @@ namespace EventBooking.Application.Services
                 EndDate = request.EndDate,
                 Price = request.Price,
                 Location = request.Location,
-                Category = request.Category
+                Category = request.Category,
+                ImageUrl = request.ImageUrl
             };
 
             _context.Events.Add(ev);
