@@ -105,8 +105,6 @@ EventBookingSystem/
 │   │   └── 📄 ReviewService.cs
 │   │
 │   │
-│   ├── 📁 Mappings/                       # AutoMapper Profiles
-│   │   └── 📄 MappingProfile.cs
 │   │
 │
 ├── 📁 EventBooking.Domain/                # Domain Layer
@@ -117,7 +115,7 @@ EventBookingSystem/
 │   │   ├── 📄 TicketType.cs
 │   │   ├── 📄 Review.cs
 │   │   ├── 📄 Wishlist.cs
-│   │   └── 📄 BaseEntity.cs
+│   │   
 │   │
 │   │
 │   ├── 📁 Enums/                          # Enumerations
@@ -131,10 +129,6 @@ EventBookingSystem/
 │   ├── 📁 Data/                           # Data Access
 │   │   ├── 📄 ApplicationDbContext.cs
 │   │   │
-│   │   ├── 📁 Configurations/             # EF Configurations
-│   │   │   ├── 📄 UserConfiguration.cs
-│   │   │   ├── 📄 EventConfiguration.cs
-│   │   │   └── 📄 BookingConfiguration.cs
 │   │   │
 │   │   ├── 📁 Migrations/                 # EF Migrations
 │   │   │   └── 📄 [Timestamp]_InitialCreate.cs
