@@ -5,7 +5,7 @@ The system supports event browsing, ticket reservations, user management, review
 Built with a modular clean architecture, the project ensures scalability, maintainability, and smooth operation across all components.
 
 
----
+
 
 ## 👥 User Roles & Permissions
 
